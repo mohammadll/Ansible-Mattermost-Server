@@ -97,6 +97,14 @@
     src: mattermost.service.j2
     dest: /etc/systemd/system/mattermost.service
   tags: matter
+- name: Open Port 8065 on FirewallD (Mattermost Port)
+  firewalld:
+    permanent: yes
+    immediate: yes
+    port: 8065/tcp
+    state: enabled
+    zone: public
+  tags: matter
 - name: Start and Enable MatterMost Service
   service:
     name: mattermost.service
@@ -107,4 +115,9 @@
   yum:
     name: nginx
     state: present
+  tags: nginx
+- name: Nginx Configuration to receive traffic on Port 80
+  template:
+    src: nginx-mattermost.conf.j2
+    dest: /etc/nginx/conf.d/nginx.conf
   tags: nginx
