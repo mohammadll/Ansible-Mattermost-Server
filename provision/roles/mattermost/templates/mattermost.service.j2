@@ -4,9 +4,9 @@ After=syslog.target network.target postgresql.service
 
 [Service]
 Type=notify
-WorkingDirectory=/tmp/mattermost
+WorkingDirectory=/media/mattermost
 User=mattermost
-ExecStart=/tmp/mattermost/bin/mattermost
+ExecStart=/media/mattermost/bin/mattermost
 PIDFile=/var/spool/mattermost/pid/master.pid
 TimeoutStartSec=3600
 KillMode=mixed
