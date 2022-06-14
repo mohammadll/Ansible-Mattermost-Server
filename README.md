@@ -13,7 +13,6 @@ This Playbook installs **Mattermost Service** , A complete Mattermost installati
 ## Here is the version information:
 - **Mattermost Server** : 6.3.0
 - **MySQL Database Server**: 5.7
-- **Nginx**
 
 ```
 ansible-playbook -i inevntory/target  mattermost.yml 
