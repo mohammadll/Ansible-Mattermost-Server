@@ -28,7 +28,7 @@
 - name: Install Python MYSQl Module
   yum:
     name: MySQL-python
-    state: present
+    state: installed
   tags: mysql
 - name: Obtain the MYSQl root password that was generated when you started MySQL for the first time
   shell: sudo grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}'
