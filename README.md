@@ -14,6 +14,10 @@ This Playbook installs **Mattermost Service** , A complete Mattermost installati
 - **Mattermost Server** : 6.3.0
 - **MySQL Database Server**: 5.7
 
+## Note:
+ - All these components have been installed on the same machine
+- You should change the content of inevntory/target based on your target IP Address machine
+
 ```
 ansible-playbook -i inevntory/target  mattermost.yml 
 ```
